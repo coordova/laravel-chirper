@@ -74,7 +74,9 @@ class ChirpPolicy
      */
     public function delete(User $user, Chirp $chirp)
     {
-        //
+        return $this->update($user, $chirp);    // llamamos al metodo update ya que es la misma logica.
+
+        // return $chirp->user()->is($user);
     }
 
     /**
